@@ -1,0 +1,108 @@
+# ================================
+# Java / Gradle
+# ================================
+
+# Compiled class files
+*.class
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Gradle cache / generated files
+**/build/
+**/.gradle/
+
+# Java packaged files
+*.jar
+*.war
+*.ear
+
+# JVM crash logs
+hs_err_pid*
+
+# ================================
+# Node / React / Vite
+# ================================
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Vite
+.vite/
+
+# npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Optional package manager caches
+.npm/
+.yarn/
+.pnpm-store/
+
+# ================================
+# IntelliJ IDEA
+# ================================
+
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# IntelliJ workspace files
+workspace.xml
+tasks.xml
+usage.statistics.xml
+dictionaries/
+shelf/
+
+# ================================
+# Environment / Secrets
+# ================================
+
+.env
+.env.*
+!.env.example
+
+# Common secret/config files
+*.pem
+*.key
+*.crt
+
+# ================================
+# Operating System Files
+# ================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ================================
+# Miscellaneous
+# ================================
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
