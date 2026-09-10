@@ -71,20 +71,20 @@ We will complete most of this section together in class.
 
 By the end of the guided portion:
 
-- [ ] WSL/Linux is ready for development.
-- [ ] The project is located in the Linux filesystem under `/home/...`.
-- [ ] Git author name and email are configured.
-- [ ] The local Git repository has been initialized.
-- [ ] The default branch is named `main`.
-- [ ] The initial `README.md` has been committed locally.
-- [ ] A public `my-platform` repository exists on GitHub.
-- [ ] GitHub CLI is installed and authenticated.
-- [ ] The local repository is connected to GitHub as `origin`.
-- [ ] Local `main` has been pushed to GitHub.
-- [ ] A GitHub ruleset protects `main`.
-- [ ] The first project branch has been created.
-- [ ] The initial repository structure has been created.
-- [ ] This assignment has been copied into `requirements/I01-production-workflow.md`.
+- [x] WSL/Linux is ready for development.
+- [x] The project is located in the Linux filesystem under `/home/...`.
+- [x] Git author name and email are configured.
+- [x] The local Git repository has been initialized.
+- [x] The default branch is named `main`.
+- [x] The initial `README.md` has been committed locally.
+- [x] A public `my-platform` repository exists on GitHub.
+- [x] GitHub CLI is installed and authenticated.
+- [x] The local repository is connected to GitHub as `origin`.
+- [x] Local `main` has been pushed to GitHub.
+- [x] A GitHub ruleset protects `main`.
+- [x] The first project branch has been created.
+- [x] The initial repository structure has been created.
+- [x] This assignment has been copied into `requirements/I01-production-workflow.md`.
 
 You may refer to the course slides and setup notes for exact commands.
 
@@ -152,10 +152,10 @@ After the PR is merged:
 3. Delete the completed local branch.
 4. Delete the completed remote branch.
 
-- [ ] Verified the expected directories and files locally and reviewed the repository state before committing.
-- [ ] Pull Request 1 has been merged.
-- [ ] Local `main` has been updated.
-- [ ] The completed branch has been cleaned up.
+- [x] Verified the expected directories and files locally and reviewed the repository state before committing.
+- [x] Pull Request 1 has been merged.
+- [x] Local `main` has been updated.
+- [x] The completed branch has been cleaned up.
 
 ---
 
@@ -198,11 +198,11 @@ You do not need a separate Linux installation of VS Code. VS Code can run in Win
 
 Before committing:
 
-- [ ] Review the contents of `.gitignore`.
-- [ ] Inspect `git status`.
-- [ ] Verify that only the intended changes will be committed.
-- [ ] Commit with an appropriate descriptive message.
-- [ ] Push the branch to GitHub.
+- [x] Review the contents of `.gitignore`.
+- [x] Inspect `git status`.
+- [x] Verify that only the intended changes will be committed.
+- [x] Commit with an appropriate descriptive message.
+- [x] Push the branch to GitHub.
 
 ---
 
@@ -232,9 +232,9 @@ You may use this wording directly or revise it to better match what you actually
 
 After merging:
 
-- [ ] Pull Request 2 has been merged.
-- [ ] Local `main` has been updated.
-- [ ] The completed branch has been cleaned up.
+- [x] Pull Request 2 has been merged.
+- [x] Local `main` has been updated.
+- [x] The completed branch has been cleaned up.
 
 ---
 
@@ -311,12 +311,12 @@ Project conventions are documented in:
 ```
 Before committing:
 
-- [ ] The style guide exists at `docs/style-guide.md`.
-- [ ] `docs/.gitkeep` has been removed.
-- [ ] `README.md` accurately describes the current project.
-- [ ] The README link/path to the style guide is correct.
-- [ ] Markdown files have been reviewed for formatting and obvious errors.
-- [ ] Repository state has been inspected before committing.
+- [x] The style guide exists at `docs/style-guide.md`.
+- [x] `docs/.gitkeep` has been removed.
+- [x] `README.md` accurately describes the current project.
+- [x] The README link/path to the style guide is correct.
+- [x] Markdown files have been reviewed for formatting and obvious errors.
+- [x] Repository state has been inspected before committing.
 
 ---
 
@@ -346,10 +346,10 @@ You may use this wording directly or edit it to better describe your actual work
 
 After merging:
 
-- [ ] Reviewed the Markdown files, verified the documented repository paths, and confirmed that the README accurately reflects the current project state.
-- [ ] Pull Request 3 has been merged.
-- [ ] Local `main` has been updated.
-- [ ] The completed branch has been cleaned up.
+- [x] Reviewed the Markdown files, verified the documented repository paths, and confirmed that the README accurately reflects the current project state.
+- [x] Pull Request 3 has been merged.
+- [x] Local `main` has been updated.
+- [x] The completed branch has been cleaned up.
 
 ---
 
