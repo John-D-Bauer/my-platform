@@ -1,21 +1,55 @@
 import './App.css'
+import profilePhoto from './assets/mibPic.jpg'
+
+interface Profile {
+  name: string
+  major: string
+  minors: string[]
+}
+
+interface InterestListProps {
+  interests: string[]
+}
+
+const profile: Profile = {
+  name: 'John Bauer',
+  major: 'Computer Science Major @ Grove City College',
+  minors: [
+    'AI and Machine Learning',
+    'Computer Game Design and Development',
+  ],
+}
+
+const interests: string[] = ['Soccer', 'Piano', 'Reading good books']
+
+function InterestList({ interests }: InterestListProps) {
+  return (
+    <ul className="interest-list">
+      {interests.map((interest) => (
+        <li key={interest}>{interest}</li>
+      ))}
+    </ul>
+  )
+}
 
 function App() {
-
   return (
-    <>
-      <h1>John Bauer</h1>
-      <h3>Computer Science Major @ Grove City College</h3>
-      <h4>Minors in AI and Machine Learning and Computer Game Design and Development</h4>
-      
+    <main className="page">
+      <header className="intro">
+        <img className="photo" src={profilePhoto} alt="Portrait of John Bauer" />
+        <h1>{profile.name}</h1>
+        <p className="major">{profile.major}</p>
+        <p className="minors">Minors in {profile.minors.join(' and ')}</p>
+      </header>
 
-      <p>Hi! Thanks for visting my page. I love creating new things with code! Besides programming
-        I also enjoy playing soccer, playing piano, and reading good books.
-      </p>
-
-      <img src="src/assets/mibPic.jpg"></img>
-      
-    </>
+      <section>
+        <p>
+          Hi! Thanks for visiting my page. I love creating new things with code!
+          Besides programming, I also enjoy:
+        </p>
+        <InterestList interests={interests} />
+      </section>
+    </main>
   )
 }
 
