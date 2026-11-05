@@ -32,24 +32,49 @@ function InterestList({ interests }: InterestListProps) {
   )
 }
 
+type ReportKind = 'bug' | 'feature'
+
+
+type Report = {
+  id: string
+  text: string
+  kind: ReportKind
+}
+
+
 function App() {
+
+  const sampleReport: Report = {
+    id: '1',
+    text: 'Navigation link is broken',
+    kind: 'bug'
+  }
+
   return (
     <main className="page">
-      <header className="intro">
-        <img className="photo" src={profilePhoto} alt="Portrait of John Bauer" />
-        <h1>{profile.name}</h1>
-        <p className="major">{profile.major}</p>
-        <p className="minors">Minors in {profile.minors.join(' and ')}</p>
-      </header>
+        <header className="intro">
+          <img className="photo" src={profilePhoto} alt="Portrait of John Bauer" />
+          <h1>{profile.name}</h1>
+          <p className="major">{profile.major}</p>
+          <p className="minors">Minors in {profile.minors.join(' and ')}</p>
+        </header>
 
-      <section>
-        <p>
-          Hi! Thanks for visiting my page. I love creating new things with code!
-          Besides programming, I also enjoy:
-        </p>
-        <InterestList interests={interests} />
-      </section>
-    </main>
+        <section>
+          <p>
+            Hi! Thanks for visiting my page. I love creating new things with code!
+            Besides programming, I also enjoy:
+          </p>
+          <InterestList interests={interests} />
+        </section>
+
+        <section className="report-board">
+          <h2>Bugs & Feature Requests</h2>
+          <p>
+            {sampleReport.text} ({sampleReport.kind})
+          </p>
+        </section>
+
+      </main>
   )
 }
 
