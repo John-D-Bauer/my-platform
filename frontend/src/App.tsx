@@ -1,5 +1,7 @@
 import './App.css'
 import profilePhoto from './assets/mibPic.jpg'
+import { useState } from 'react'
+
 
 interface Profile {
   name: string
@@ -42,13 +44,37 @@ type Report = {
 }
 
 
+
 function App() {
 
-  const sampleReport: Report = {
-    id: '1',
-    text: 'Navigation link is broken',
-    kind: 'bug'
+  // const sampleReport: Report = {
+  //   id: '1',
+  //   text: 'Navigation link is broken',
+  //   kind: 'bug'
+  // }
+
+  // const initialReports: Report[] = [
+  //   { id: '1', text: 'Navigation link is broken', kind: 'bug' },
+  //   { id: '2', text: 'Add dark mode', kind: 'feature' },
+  // ]
+
+  const [reports, setReports] = useState<Report[]>([])
+  const [newReportText, setNewReportText] = useState('')
+
+  function addReport() {
+    const text = newReportText.trim()
+    if (text.length === 0) return
+
+    const newReport: Report = {
+      id: crypto.randomUUID(),
+      text: text,    
+      kind: 'bug',
+    }
+
+    setReports([...reports, newReport])
+    setNewReportText('')
   }
+
 
   return (
     <main className="page">
@@ -69,9 +95,25 @@ function App() {
 
         <section className="report-board">
           <h2>Bugs & Feature Requests</h2>
-          <p>
-            {sampleReport.text} ({sampleReport.kind})
-          </p>
+          <input
+            type="text"
+            value={newReportText}
+            onChange={(event) => setNewReportText(event.target.value)}
+            placeholder="Describe a bug..."
+            aria-label="New bug report"
+          />
+
+          <button type="button" onClick={addReport}>
+            Add Bug
+          </button>
+
+          <ul>
+            {reports.map((report) => (
+              <li key={report.id}>
+                {report.text} ({report.kind})
+              </li>
+            ))}
+          </ul>
         </section>
 
       </main>
